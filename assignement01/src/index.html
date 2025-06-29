@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced Fictional Orbital System</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Main Canvas -->
+  <canvas class="three"></canvas>
+  
+  <!-- UI Overlay -->
+  <div class="ui-overlay">
+    <div class="system-info">
+      <h2>Zynthar System</h2>
+      <div class="planet-list">
+        <div class="planet-item" data-planet="star">
+          <span class="planet-color" style="background-color: #ffcc00;"></span>
+          <span class="planet-name">Central Star</span>
+        </div>
+        <div class="planet-item" data-planet="drelon">
+          <span class="planet-color" style="background-color: #44c8f0;"></span>
+          <span class="planet-name">Drelon</span>
+        </div>
+        <div class="planet-item" data-planet="vorka">
+          <span class="planet-color" style="background-color: #00ff66;"></span>
+          <span class="planet-name">Vorka</span>
+        </div>
+        <div class="planet-item" data-planet="klynt">
+          <span class="planet-color" style="background-color: #ff4477;"></span>
+          <span class="planet-name">Klynt</span>
+        </div>
+        <div class="planet-item" data-planet="xoron">
+          <span class="planet-color" style="background-color: #ff77ff;"></span>
+          <span class="planet-name">Xoron</span>
+        </div>
+        <div class="planet-item" data-planet="beldar">
+          <span class="planet-color" style="background-color: #ff8844;"></span>
+          <span class="planet-name">Beldar</span>
+        </div>
+        <div class="planet-item" data-planet="bluecube">
+          <span class="planet-color" style="background-color: #0000ff;"></span>
+          <span class="planet-name">Mysterious Artifact</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="controls-info">
+      <h3>Controls</h3>
+      <p>🖱️ Click & Drag: Rotate view</p>
+      <p>🔄 Scroll: Zoom in/out</p>
+      <p>👆 Click planets for info</p>
+      <button id="toggleTrails">Toggle Orbital Trails</button>
+      <button id="toggleLabels">Toggle Planet Names</button>
+      <button id="resetCamera">Reset Camera</button>
+      
+      <div class="time-control">
+        <h4>Time Control</h4>
+        <div class="date-display">
+          <span id="currentDate">April 27, 4057</span>
+        </div>
+        <div class="speed-controls">
+          <button id="decreaseSpeed">◀◀ Reverse Time</button>
+          <button id="pauseTime">⏸️ Pause</button>
+          <button id="increaseSpeed">Fast Forward ▶▶</button>
+        </div>
+        <div class="speed-indicator">
+          Speed: <span id="speedDisplay">1x</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="planet-details" id="planetDetails" style="display: none;">
+      <h3 id="planetTitle">Planet Name</h3>
+      <p id="planetDescription">Planet description will appear here.</p>
+      <div class="planet-stats">
+        <div class="stat">
+          <span class="stat-label">Orbital Radius:</span>
+          <span class="stat-value" id="orbitalRadius">-</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Orbital Speed:</span>
+          <span class="stat-value" id="orbitalSpeed">-</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Type:</span>
+          <span class="stat-value" id="planetType">-</span>
+        </div>
+      </div>
+      <button id="closePlanetDetails">Close</button>
+    </div>
+  </div>
+  
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
